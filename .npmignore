@@ -1,0 +1,27 @@
+# Source files
+src/
+
+# Configuration
+.babelrc
+.gitignore
+
+# Examples
+examples/
+
+# Development files
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Testing
+coverage/
+*.test.js
+*.spec.js
+
+# Git
+.git/
+.gitignore

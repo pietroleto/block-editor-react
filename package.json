@@ -1,0 +1,56 @@
+{
+  "name": "@pietroleto/block-editor-react",
+  "version": "1.0.0",
+  "private": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "description": "A simple, elegant block-based rich text editor for React - create structured content with titles, paragraphs, and images",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir dist --copy-files",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "editor",
+    "block-editor",
+    "rich-text",
+    "wysiwyg",
+    "content-editor",
+    "react-component",
+    "contenteditable",
+    "medium-editor",
+    "notion-like"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/block-editor-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/block-editor-react/issues"
+  },
+  "homepage": "https://github.com/yourusername/block-editor-react#readme",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@babel/preset-react": "^7.24.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  }
+}

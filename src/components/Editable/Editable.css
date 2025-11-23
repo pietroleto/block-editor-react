@@ -1,0 +1,24 @@
+/* Editable Component Styles */
+
+.editable-component {
+    position: relative;
+    outline: none;
+    word-wrap: break-word;
+    min-height: 1.5em;
+    border: 1px solid var(--block-editor-input-border, rgba(0, 0, 0, .1));
+    padding: 8px;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+.editable-component[data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: gray;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.editable-component:focus {
+    border-color: var(--block-editor-input-focus-border);
+}
