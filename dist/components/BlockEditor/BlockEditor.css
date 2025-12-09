@@ -1,0 +1,227 @@
+/* BlockEditor Component Styles */
+
+.blog-editor-container {
+    min-height: 100vh;
+    background-color: var(--block-editor-container-background);
+    padding: 0 5vw;
+}
+
+.blog-editor-container form {
+    border: none;
+}
+
+*[contenteditable=true] {
+    outline: none;
+    word-wrap: break-word;
+}
+
+.hidden {
+    display: none;
+}
+
+.editor-nav,
+.editor-nav .row {
+    height: 80px !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--block-editor-toolbar-border);
+    margin: 0 auto;
+    user-select: none;
+    background-color: var(--block-editor-toolbar-background) !important;
+    z-index: 999;
+    box-shadow: var(--block-editor-toolbar-shadow);
+}
+
+.toolbar {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.toolbar-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    fill: var(--block-editor-toolbar-icon-color);
+    padding: 5px;
+    cursor: pointer;
+    transition: fill 0.2s ease;
+}
+
+.toolbar-icon:hover {
+    fill: var(--block-editor-toolbar-icon-hover);
+}
+
+.image-upload-label {
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: var(--block-editor-back-button-color);
+    transition: color 0.2s ease;
+}
+
+.back-button:hover {
+    color: var(--block-editor-back-button-hover);
+}
+
+.publish-button {
+    padding: 7px 12px;
+    background-color: var(--block-editor-publish-button-background);
+    border: 0;
+    color: var(--block-editor-publish-button-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.publish-button:hover {
+    background-color: var(--block-editor-publish-button-hover);
+}
+
+@media only screen and (max-width: 991px) {
+    .col-sm-0 {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .col-0 {
+        display: none !important;
+    }
+
+    .publish-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        padding: 10px 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+    }
+
+    .toolbar-icon {
+        margin: 0;
+    }
+}
+
+/*
+    HEADER / TITLE AREA
+*/
+.editor-header {
+    padding-top: 100px;
+}
+
+.editor-header h3 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--block-editor-heading-color);
+}
+
+.article-title {
+    min-height: 40px;
+}
+
+.publication-date {
+    font-weight: 600;
+    color: var(--block-editor-date-color);
+    font-size: 1em;
+    display: block;
+    margin-top: 10px;
+}
+
+.editor-header hr {
+    border-color: var(--block-editor-divider-color);
+    margin: 25px 0 0 0;
+    height: 1px;
+    width: 100%;
+}
+
+/*
+    CONTENT AREA
+*/
+.editor-content {
+    margin-top: 40px;
+    font-size: 18px;
+    padding-bottom: 100px;
+}
+
+.content-block {
+    margin-bottom: 8px;
+}
+
+.editor-content p,
+.editor-content h4 {
+    margin: 8px 0;
+    outline: none;
+    color: var(--block-editor-text-color);
+    letter-spacing: normal;
+    line-height: 1.6;
+}
+
+.editor-content h4 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 20px;
+    color: var(--block-editor-heading-color);
+}
+
+.editor-content p {
+    font-size: 18px;
+}
+
+/*
+    IMAGE BLOCKS
+*/
+.image-block {
+    position: relative;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.content-image {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 4px;
+    display: block;
+}
+
+.delete-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    background-color: var(--block-editor-image-delete-background);
+    fill: var(--block-editor-image-delete-color);
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: var(--block-editor-image-delete-shadow);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.delete-image:hover {
+    fill: var(--block-editor-image-delete-hover-color);
+    box-shadow: var(--block-editor-image-delete-hover-shadow);
+}
+
+/* Responsive images */
+@media only screen and (max-width: 768px) {
+    .content-image {
+        max-width: 100%;
+        max-height: 300px;
+    }
+}
