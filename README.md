@@ -15,9 +15,41 @@ A simple, elegant block-based rich text editor for React. Create structured cont
 
 ## Installation
 
+Since this package is not published on npm registry, you need to install it directly from GitHub:
+
+### Option 1: Using Tarball URL (Recommended for Windows)
+
 ```bash
-npm install block-editor-react
+npm install https://github.com/pietroleto/block-editor-react/tarball/v1.0.2
 ```
+
+Or add to your `package.json`:
+
+```json
+{
+  "dependencies": {
+    "@pietroleto/block-editor-react": "https://github.com/pietroleto/block-editor-react/tarball/v1.0.2"
+  }
+}
+```
+
+### Option 2: Using Git Protocol (Linux/Mac)
+
+```bash
+npm install git+https://github.com/pietroleto/block-editor-react.git#v1.0.2
+```
+
+Or add to your `package.json`:
+
+```json
+{
+  "dependencies": {
+    "@pietroleto/block-editor-react": "git+https://github.com/pietroleto/block-editor-react.git#v1.0.2"
+  }
+}
+```
+
+**Note:** On Windows, the Git protocol method may fail with ENOENT errors due to SSH conversion issues. Use the tarball URL method instead.
 
 ## Quick Start
 
